@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heal Me</title>
+    <link rel="icon" type="image/x-icon" href="../Static/Images/site-icon.png">
+    <link href="../Static/global.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script defer src="../Static/healme.js"></script>
+</head>
+<body class="background rubik">
+<main>
+    <form id="review-form" class="grid blue write-review-container">
+        <div class="review-details">
+            <div class="flex username-manage mb-2">
+                <label id="username-label" class="underline">Username</label>
+                <label>
+                    <input class="anonymous-checkbox" type="checkbox" name="anonymous-checkbox">
+                    <span>Post Anonymously</span>
+                </label>
+            </div>
+            <div class="mb-1">
+                <label>
+                    <textarea class="green review-text-area" name="review-area" rows="5" required></textarea>
+                </label>
+            </div>
+        </div>
+        <div class="flex rating-container">
+            <div class="flex star-rating-container">
+                <label class="underline">Rating:</label>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Great!">5 stars</label>
+                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Really Bad!">1 star</label>
+                </div>
+            </div>
+            <button class="purple btn" type="submit">
+                <span class="btn-text">Submit</span>
+            </button>
+        </div>
+    </form>
+</main>
+</body>
+</html>

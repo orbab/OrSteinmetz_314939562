@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heal Me</title>
+    <link rel="icon" type="image/x-icon" href="../Static/Images/site-icon.png">
+    <link href="../Static/global.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script defer src="../Static/healme.js"></script>
+</head>
+<body class="background rubik">
+<nav>
+    <div class="navbar flex">
+        <div class="flex main-nav">
+            <div class="site-logo flex">
+                <img src="../Static/Images/site-icon.png" class="logo" alt="Logo">
+                <h1>HealMe</h1>
+            </div>
+            <ul class="nav-list">
+                <li id="nav-home-btn" class="inline nav-item nav-item-animation">
+                    <a class="link" href="home-page.html">
+                        <i class="material-icons icon">home</i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li id="nav-search-btn" class="inline nav-item nav-item-animation">
+                    <a class="link" href="search-page.html">
+                        <i class="material-icons icon">search</i>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li id="nav-profile-btn" class="inline nav-item nav-item-animation">
+                    <a class="link" href="profile-page.html">
+                        <i class="material-icons icon">person</i>
+                        <span>My Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="login-nav-button">
+            <a id="log-link" href="login-page.html">
+                <button type="button" class="purple btn">
+                    <span class="btn-text">
+                        <i id="log-reg-icon" class="material-icons icon">login</i>
+                        <span id="log-reg-text">Log In</span>
+                    </span>
+                </button>
+            </a>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="login-page flex">
+        <h3 class="login-instructions">Are you sure you would like to log out?</h3>
+        <button id="logout-btn" class="purple btn" type="button">
+            <span class="btn-text">Yes, I am sure</span>
+        </button>
+    </div>
+</main>
+</body>
+</html>

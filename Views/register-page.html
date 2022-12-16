@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heal Me</title>
+    <link rel="icon" type="image/x-icon" href="../Static/Images/site-icon.png">
+    <link href="../Static/global.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script defer src="../Static/healme.js"></script>
+</head>
+<body class="background rubik">
+<nav>
+    <div class="navbar flex">
+        <div class="flex main-nav">
+            <div class="site-logo flex">
+                <img src="../Static/Images/site-icon.png" class="logo" alt="Logo">
+                <h1>HealMe</h1>
+            </div>
+            <ul class="nav-list">
+                <li id="nav-home-btn" class="inline nav-item nav-item-animation">
+                    <a class="link" href="home-page.html">
+                        <i class="material-icons icon">home</i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li id="nav-search-btn" class="inline nav-item nav-item-animation">
+                    <a class="link" href="search-page.html">
+                        <i class="material-icons icon">search</i>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li id="nav-profile-btn" class="inline nav-item nav-item-animation">
+                    <a class="link" href="profile-page.html">
+                        <i class="material-icons icon">person</i>
+                        <span>My Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="login-nav-button">
+            <a id="log-link" href="login-page.html">
+                <button type="button" class="purple btn">
+                    <span class="btn-text">
+                        <i id="log-reg-icon" class="material-icons icon">login</i>
+                        <span id="log-reg-text">Log In</span>
+                    </span>
+                </button>
+            </a>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="login-page flex">
+        <h1>Let's Get You In</h1>
+        <h3 class="register-instruction">Enter the following information:</h3>
+        <form id="register-form" class="login-form grid">
+            <span class="form-line-label">First Name:</span>
+            <input class="blue form-input" type="text" placeholder="Enter First Name" name="fname" required>
+            <span class="form-line-label">Last Name:</span>
+            <input class="blue form-input" type="text" placeholder="Enter Last Name" name="lname" required>
+            <span class="form-line-label">Email:</span>
+            <input class="blue form-input" type="email" placeholder="Enter Email" name="email" required>
+            <span class="form-line-label">Username:</span>
+            <input class="blue form-input" type="text" placeholder="Enter Username" name="uname" required>
+            <span class="form-line-label">Password:</span>
+            <input class="blue form-input" type="password" placeholder="Enter Password" name="pswd" required>
+            <div id="register-error-msg" class="flex">
+                <div id="loading-spinner" class="hidden lds-hourglass"></div>
+                <span id="register-error-msg-text"></span>
+            </div>
+            <button class="login-btn purple btn" type="submit">Register</button>
+        </form>
+        <a href="login-page.html">
+            <h5>Already have a user? Log in!</h5>
+        </a>
+    </div>
+</main>
+</body>
+</html>

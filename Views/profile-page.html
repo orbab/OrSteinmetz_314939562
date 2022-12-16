@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heal Me</title>
+    <link rel="icon" type="image/x-icon" href="../Static/Images/site-icon.png">
+    <link href="../Static/global.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script defer src="../Static/healme.js"></script>
+</head>
+<body class="background rubik">
+<nav>
+    <div class="navbar flex">
+        <div class="flex main-nav">
+            <div class="site-logo flex">
+                <img src="../Static/Images/site-icon.png" class="logo" alt="Logo">
+                <h1>HealMe</h1>
+            </div>
+            <ul class="nav-list">
+                <li id="nav-home-btn" class="inline nav-item nav-item-animation">
+                    <a class="link" href="home-page.html">
+                        <i class="material-icons icon">home</i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li id="nav-search-btn" class="inline nav-item nav-item-animation">
+                    <a class="link" href="search-page.html">
+                        <i class="material-icons icon">search</i>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li id="nav-profile-btn" class="inline nav-item nav-item-animation">
+                    <a class="link" href="profile-page.html">
+                        <i class="material-icons icon">person</i>
+                        <span>My Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="login-nav-button">
+            <a id="log-link" href="login-page.html">
+                <button id="log-btn" type="button" class="purple btn">
+                    <span class="btn-text">
+                        <i id="log-reg-icon" class="material-icons icon">login</i>
+                        <span id="log-reg-text">Log In</span>
+                    </span>
+                </button>
+            </a>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="grid profile-page-content">
+        <div class="welcome-text">
+            <h1 id="welcome-header" class="no-margin"></h1>
+        </div>
+        <div class="profile-info flex">
+            <h3 class="no-margin">Your Information:</h3>
+            <div class="profile-form-container">
+                <form id="update-form" class="profile-form grid">
+                    <span class="form-line-label">First Name:</span>
+                    <input disabled class="blue form-input" type="text" placeholder="Enter First Name" name="fname" required>
+                    <span class="form-line-label">Last Name:</span>
+                    <input disabled class="blue form-input" type="text" placeholder="Enter Last Name" name="lname" required>
+                    <span class="form-line-label">Email:</span>
+                    <input disabled class="blue form-input" type="email" placeholder="Enter Email" name="email" required>
+                    <button id="update-btn" class="purple btn" type="button">
+                        <span class="btn-text">Update</span>
+                    </button>
+                    <button id="save-btn" class="purple btn" type="submit" disabled>
+                        <span class="btn-text">Save</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="grid user-review-container">
+            <div class="review-header">
+                <h3 class="no-margin">My Reviews:</h3>
+            </div>
+            <div id="reviews-container" class="grid profile-review-container">
+                <div class="grid blue review">
+                    <div class="review-details">
+                        <div class="mb-1">
+                            <label class="underline">Therapist:</label>
+                            <p class="inline">THERAPIST_PLACEHOLDER</p>
+                        </div>
+                        <div>
+                            <label class="underline">Review:</label>
+                            <p class="inline">TEXT_PLACEHOLDER</p>
+                        </div>
+                    </div>
+                    <div class="flex rating-container">
+                        <div>
+                            <label class="underline">Rating:</label>
+                            <i class="material-icons icon star-icon star1">star</i>
+                            <i class="material-icons icon star-icon star2">star</i>
+                            <i class="material-icons icon star-icon star3">star</i>
+                            <i class="material-icons icon star-icon star4">star</i>
+                            <i class="material-icons icon star-icon star5">star</i>
+                        </div>
+                        <button id="DELETE_BUTTON_PLACEHOLDER" class="orange btn" type="button">
+                            <i class="material-icons icon">delete</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heal Me</title>
+    <link rel="icon" type="image/x-icon" href="../Static/Images/site-icon.png">
+    <link href="../Static/global.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script defer src="../Static/healme.js"></script>
+</head>
+<body class="background rubik">
+<nav>
+    <div class="navbar flex">
+        <div class="flex main-nav">
+            <div class="site-logo flex">
+                <img src="../Static/Images/site-icon.png" class="logo" alt="Logo">
+                <h1>HealMe</h1>
+            </div>
+            <ul class="nav-list">
+                <li id="nav-home-btn" class="inline nav-item nav-item-animation">
+                    <a class="link" href="home-page.html">
+                        <i class="material-icons icon">home</i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li id="nav-search-btn" class="inline nav-item nav-item-animation">
+                    <a class="link" href="search-page.html">
+                        <i class="material-icons icon">search</i>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li id="nav-profile-btn" class="inline nav-ite nav-item-animation">
+                    <a class="link" href="profile-page.html">
+                        <i class="material-icons icon">person</i>
+                        <span>My Profile</span>
+                    </a>
+                </li>
+                <li class="inline nav-item">
+                    <a id="return-search-btn" href="search-page.html">
+                        <button type="button" class="purple btn">
+                            <span class="btn-text">
+                                <i class="material-icons icon">arrow_back_ios</i>
+                                <span>Back To Search</span>
+                            </span>
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="login-nav-button">
+            <a id="log-link" href="login-page.html">
+                <button id="log-btn" type="button" class="purple btn">
+                    <span class="btn-text">
+                        <i id="log-reg-icon" class="material-icons icon">login</i>
+                        <span id="log-reg-text">Log In</span>
+                    </span>
+                </button>
+            </a>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="grid healer-profile-container">
+        <div class="grid blue healer-info-container">
+            <div class="healer-icon-name">
+                <img id="healer-image" class="healer-icon" src="../Static/Images/business-woman.png"
+                     alt="Female Healer">
+                <p id="healer-name">Name</p>
+            </div>
+            <div class="review-healer-btn">
+                <button id="write-review-btn" class="purple btn" type="button">
+                    <span class="btn-text">Write A Review</span>
+                </button>
+            </div>
+            <div class="expanded-healer-info">
+                <div class="mb-1">
+                    <label class="underline">Specialties:</label>
+                    <p id="haeler-specialties" class="inline">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="mb-1">
+                    <label class="underline">Location:</label>
+                    <p id="healer-location" class="inline">Lorem ipsum dolor.</p>
+                </div>
+                <div>
+                    <label class="underline">About Me:</label>
+                    <p id="healer-desc" class="inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                        aperiam eaque ex illo
+                        labore laudantium minima possimus recusandae sequi, vitae!</p>
+                </div>
+            </div>
+            <div class="healer-info-rating">
+                <label class="underline">Rating:</label>
+                <i id="star1" class="material-icons icon star-icon">star</i>
+                <i id="star2" class="material-icons icon star-icon">star</i>
+                <i id="star3" class="material-icons icon star-icon">star</i>
+                <i id="star4" class="material-icons icon star-icon">star</i>
+                <i id="star5" class="material-icons icon star-icon">star</i>
+                <p id="healer-rating" class="inline">0</p>
+            </div>
+            <div id="information-container" class="contact-info">
+                <div class="mb-2">
+                    <label class="underline">Contact information:</label>
+                </div>
+                <div id="phone-container" class="mb-2">
+                    <i class="material-icons icon">phone</i>
+                    <p id="healer-phone" class="inline">XXX-XXXXXXX</p>
+                </div>
+                <div id="website-container">
+                    <i class="material-icons icon">link</i>
+                    <a id="healer-website" href="home-page.html">
+                        <p class="inline">www.healme.awesome</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="review-header">
+            <h3 class="no-margin">Reviews:</h3>
+        </div>
+        <div id="reviews-container" class="grid review-container">
+            <div class="grid blue review">
+                <div class="review-details">
+                    <div class="mb-1">
+                        <label class="underline">USERNAME_PLACEHOLDER</label>
+                    </div>
+                    <div class="mb-1">
+                        <label class="underline">Review:</label>
+                        <p class="inline">TEXT_PLACEHOLDER</p>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <label class="underline">Rating:</label>
+                    <i class="material-icons icon star-icon star1">star</i>
+                    <i class="material-icons icon star-icon star2">star</i>
+                    <i class="material-icons icon star-icon star3">star</i>
+                    <i class="material-icons icon star-icon star4">star</i>
+                    <i class="material-icons icon star-icon star5">star</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

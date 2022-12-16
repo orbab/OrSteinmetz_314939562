@@ -1,0 +1,772 @@
+.background {
+    background-image: url("Images/background.jpg");
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.inline {
+    display: inline;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.blue {
+    background-color: #90b3f1;
+}
+
+.purple {
+    background-color: #ae90f1;
+}
+
+.green {
+    background-color: #90f1cd;
+}
+
+.orange {
+    background-color: #f1b890;
+}
+
+.rubik {
+    font-family: Rubik, serif;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.mb-1 {
+    margin-bottom: 1vh;
+}
+
+.mb-2 {
+    margin-bottom: 2vh;
+}
+
+.navbar {
+    height: 8vh;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.25vh;
+}
+
+.home-page-nav {
+    font-size: 2.5vh;
+}
+
+.main-nav {
+    align-items: center;
+}
+
+.site-logo {
+    margin-left: 1vw;
+    align-items: center;
+}
+
+.logo {
+    height: 8vh;
+}
+
+.nav-list {
+    padding-left: 0;
+    margin-left: 1vw;
+}
+
+.nav-item {
+    list-style-type: none;
+    padding: 3vh;
+    text-decoration: none;
+}
+
+.nav-item-animation {
+    background-image: linear-gradient(
+            to right,
+            #90b3f1,
+            #90b3f1 50%,
+            #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item-animation:hover {
+    background-position: 0;
+}
+
+.nav-item-animation:hover::before {
+    width:100%;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:visited {
+    color: black;
+}
+
+.icon {
+    font-size: 3vh !important;
+    vertical-align: text-bottom;
+}
+
+.login-nav-button {
+    margin-right: 1vw;
+}
+
+.btn {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1em #888888;
+    margin: 0.5em;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    cursor: initial;
+}
+
+.btn-text {
+    margin: 2rem 2rem;
+}
+
+.login-page {
+    font-size: 3vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-form {
+    gap: 2vh 2vw;
+    align-items: inherit;
+    flex-direction: inherit;
+}
+
+.form-line {
+    display: flex;
+    align-content: space-between;
+}
+
+.form-line-label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.form-input {
+    font-size: 2vh;
+    border-radius: 0.25rem;
+    padding: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.form-error-msg {
+    grid-column-end: 3;
+    grid-column-start: 1;
+    color: red;
+    justify-self: center;
+    font-size: 2.5vh;
+}
+
+.form-success-msg {
+    grid-column-end: 3;
+    grid-column-start: 1;
+    color: green;
+    justify-self: center;
+    font-size: 2.5vh;
+    align-items: center;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #90f1cd;
+    border-color: #90f1cd transparent #90f1cd transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+        transform: rotate(1800deg);
+    }
+}
+
+.form-input-error {
+    border-color: orangered;
+}
+
+.login-btn {
+    margin-top: 2vh;
+    margin-bottom: 0.5vh;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.home-page-main-content {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    grid-template-columns: 2fr 1fr;
+}
+
+.site-name {
+    font-size: 8vh;
+}
+
+.home-page-desc {
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+.home-buttons {
+    justify-content: center;
+}
+
+.home-page-icon {
+    width: 30vw;
+    align-self: center;
+}
+
+.home-page-icon-container {
+    text-align: center;
+}
+
+.home-page-left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.home-page-right {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.login-instructions {
+    margin-top: 1vh;
+}
+
+.register-instruction {
+    margin-top: 0.5vh;
+}
+
+.search-page-main-content {
+    font-size: 2.5vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: initial;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.search-bar {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+    margin-bottom: 1vh;
+}
+
+.search-form {
+    grid-template-columns: 1fr 1fr 0.5fr;
+    width: fit-content;
+    justify-self: center;
+    align-items: center;
+    column-gap: 1.5vw;
+    row-gap: 1vh;
+}
+
+.search-input {
+    font-size: 2vh;
+    border-radius: 0.25rem;
+    padding: 0;
+    margin-left: 0.5vw;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.location-search {
+    display: flex;
+    align-content: center;
+}
+
+.loc-icon {
+    font-size: 2.5vh !important;
+}
+
+.radius-slider {
+    display: flex;
+    align-items: center;
+    column-gap: 3vw;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-content: center;
+    margin-right: 1vw;
+}
+
+.slidecontainer {
+    width: 35vw;
+}
+
+.radius-output {
+    width: 4vw;
+}
+
+
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #000000;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #90f1cd;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #90f1cd;
+    cursor: pointer;
+}
+
+.top-border {
+    border-top: #555555 solid;
+}
+
+.map-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.map {
+    height: 67vh;
+    margin: 1em;
+}
+
+.results-container {
+    margin-top: 2vh;
+    grid-template-columns: 1fr;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-size: 2vh;
+    row-gap: 1vh;
+    grid-auto-flow: row;
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+.result-container {
+    border: black solid;
+    height: min-content;
+    border-radius: 0.5em;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+}
+
+.healer-icon-name {
+    margin-top: 1vh;
+    text-align: center;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: center;
+}
+
+.healer-info {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: 1em;
+}
+
+.healer-rating {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: end;
+    margin: 1em;
+}
+
+.choose-healer-btn {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    align-self: end;
+    justify-self: center;
+}
+
+.healer-icon {
+    width: 5vw;
+}
+
+.star-icon {
+    font-size: 2vh;
+}
+
+.checked {
+    color: orange;
+}
+
+.healer-profile-container {
+    justify-content: center;
+    grid-template-columns: 1fr;
+    row-gap: 1vh;
+    justify-items: center;
+}
+
+.healer-info-container {
+    width: 90%;
+    border: black solid;
+    height: min-content;
+    border-radius: 0.5em;
+    grid-template-columns: 0.5fr 1.5fr 0.75fr;
+    font-size: 2vh;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.review-healer-btn {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: end;
+    justify-self: center;
+    margin-bottom: 0.5em;
+}
+
+.expanded-healer-info {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: 1em;
+}
+
+.healer-info-rating {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: end;
+    margin: 1em;
+}
+
+.contact-info {
+    margin: 1em;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.review-header {
+    width: 100%;
+    text-align: center;
+}
+
+.review-container {
+    width: 90%;
+    height: 49vh;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    row-gap: 1vh;
+    column-gap: 1vw;
+    justify-items: center;
+    overflow-y: scroll;
+    align-self: center;
+    border: #555555 solid;
+    padding: 1em;
+}
+
+.review {
+    width: 100%;
+    border: black solid;
+    border-radius: 0.5em;
+    font-size: 2vh;
+    height: 20vh;
+}
+
+.review-details {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 1em;
+}
+
+.review-rating {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    align-self: end;
+    margin: 1em;
+}
+
+.write-review-container {
+    width: initial;
+    border: black solid;
+    height: min-content;
+    border-radius: 0.5em;
+    font-size: 5vh;
+}
+
+.username-manage {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.anonymous-checkbox {
+    accent-color: #90f1cd;
+}
+
+.review-text-area {
+    width: 100%;
+    resize: none;
+    font-family: inherit;
+    border-radius: 0.5em;
+}
+
+.write-star-icon {
+    font-size: 5vh;
+}
+
+.rating-container {
+    margin: 0 1em 1em;
+    align-items: center;
+    column-gap: 2vw;
+    justify-content: space-between;
+}
+
+.star-rating-container {
+    margin: 1em;
+    align-items: center;
+    column-gap: 2vw;
+}
+
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+.profile-page-content {
+    grid-template-columns: 1fr 1fr;
+    font-size: 3vh;
+    column-gap: 1vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.welcome-text {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+    text-align: center;
+}
+
+.user-review-container {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.profile-review-container {
+    width: 90%;
+    height: 50vh;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    row-gap: 1vh;
+    column-gap: 1vw;
+    justify-items: center;
+    overflow-y: scroll;
+    align-self: center;
+    border: #555555 solid;
+    padding: 1em;
+}
+
+.profile-info {
+    font-size: 3vh;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+
+.profile-form {
+    gap: 2vh 2vw;
+    align-items: inherit;
+    flex-direction: inherit;
+    height: min-content;
+}
+
+.profile-form-container {
+    width: 90%;
+    height: 50vh;
+    border: #555555 solid;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+}
