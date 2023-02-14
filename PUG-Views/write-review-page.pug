@@ -1,0 +1,35 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    title Heal Me
+    link(rel='icon' type='image/x-icon' href='Images/site-icon.png')
+    link(href='global.css' rel='stylesheet')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    script(defer src='healme.js')
+main
+    form#review-form.grid.blue(action='/review?therapist='+therapistId method='POST')
+        .review-details
+            .flex.username-manage.mb-2
+                label#username-label.underline #{user.userName}
+                label
+                    input(type='checkbox' name='anonymous')
+                    span Post Anonymously
+            .mb-1
+                label
+                    textarea.green.review-text-area(name='reviewText' rows='5' required='')
+        .flex.rating-container
+            .flex.star-rating-container
+                label.underline Rating:
+                .rating
+                    input#star5(type='radio' name='rating' value='5')
+                    label(for='star5' title='Great!') 5 stars
+                    input#star4(type='radio' name='rating' value='4')
+                    label(for='star4' title='Pretty good') 4 stars
+                    input#star3(type='radio' name='rating' value='3')
+                    label(for='star3' title='Meh') 3 stars
+                    input#star2(type='radio' name='rating' value='2')
+                    label(for='star2' title='Kinda bad') 2 stars
+                    input#star1(type='radio' name='rating' value='1')
+                    label(for='star1' title='Really Bad!') 1 star
+            button.purple(type='submit')
+                span Submit

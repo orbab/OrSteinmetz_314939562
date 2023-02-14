@@ -1,0 +1,49 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    title Heal Me
+    link(rel='icon' type='image/x-icon' href='Images/site-icon.png')
+    link(href='global.css' rel='stylesheet')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    script(defer src='healme.js')
+    script(defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDDGRSkXdFCGS4R6KAtQLE5KWFIBmsW1dY&callback=initMap&v=weekly')
+nav
+    .flex
+        .flex.main-nav
+            .site-logo.flex
+                img(src='Images/site-icon.png' alt='Logo')
+                h1 HealMe
+            ul
+                li.inline.nav-item-animation(
+                    class={'bold': selectedPage === 'home'}
+                )
+                    a.link(href='home')
+                        i.material-icons home
+                        span Home
+                li.inline.nav-item-animation(
+                    class={'bold': selectedPage === 'search'}
+                )
+                    a.link(href='search')
+                        i.material-icons search
+                        span Search
+                if isLoggedIn
+                    li.inline.nav-item-animation(
+                        class={'bold': selectedPage === 'profile' || selectedPage === 'healer'}
+                    )
+                        a.link(href='profile')
+                            i.material-icons person
+                            span My Profile
+        .login-nav-button
+            if isLoggedIn
+                a(href='logout')
+                    button.purple(type='button')
+                        span
+                            i.material-icons.mr-1 logout
+                            span Log Out
+            else
+                a(href='login')
+                    button.purple(type='button')
+                        span
+                            i.material-icons.mr-1 login
+                            span Log In
+block content

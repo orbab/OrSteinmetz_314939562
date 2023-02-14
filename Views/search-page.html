@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Heal Me</title>
-    <link rel="icon" type="image/x-icon" href="../Static/Images/site-icon.png">
-    <link href="../Static/global.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Images/site-icon.png">
+    <link href="global.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script defer src="../Static/healme.js"></script>
+    <script defer src="healme.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDGRSkXdFCGS4R6KAtQLE5KWFIBmsW1dY&callback=initMap&v=weekly"></script>
 </head>
 <body class="background rubik">
 <nav>
-    <div class="navbar flex">
+    <div class="flex">
         <div class="flex main-nav">
             <div class="site-logo flex">
-                <img src="../Static/Images/site-icon.png" class="logo" alt="Logo">
+                <img src="Images/site-icon.png" alt="Logo">
                 <h1>HealMe</h1>
             </div>
-            <ul class="nav-list">
-                <li id="nav-home-btn" class="inline nav-item nav-item-animation">
-                    <a class="link" href="home-page.html">
-                        <i class="material-icons icon">home</i>
+            <ul>
+                <li id="nav-home-btn" class="inline nav-item-animation">
+                    <a class="link" href="home">
+                        <i class="material-icons">home</i>
                         <span>Home</span>
                     </a>
                 </li>
-                <li id="nav-search-btn" class="inline nav-item nav-item-animation">
-                    <a class="link" href="search-page.html">
-                        <i class="material-icons icon">search</i>
+                <li id="nav-search-btn" class="inline nav-item-animation">
+                    <a class="link" href="search">
+                        <i class="material-icons">search</i>
                         <span>Search</span>
                     </a>
                 </li>
-                <li id="nav-profile-btn" class="inline nav-item nav-item-animation">
-                    <a class="link" href="profile-page.html">
-                        <i class="material-icons icon">person</i>
+                <li id="nav-profile-btn" class="inline nav-item-animation">
+                    <a class="link" href="profile">
+                        <i class="material-icons">person</i>
                         <span>My Profile</span>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="login-nav-button">
-            <a id="log-link" href="login-page.html">
-                <button id="log-btn" type="button" class="purple btn">
-                    <span class="btn-text">
-                        <i id="log-reg-icon" class="material-icons icon">login</i>
+            <a id="log-link" href="login">
+                <button id="log-btn" type="button" class="purple">
+                    <span>
+                        <i id="log-reg-icon" class="material-icons">login</i>
                         <span id="log-reg-text">Log In</span>
                     </span>
                 </button>
@@ -52,8 +52,8 @@
 </nav>
 <main>
     <div class="grid search-page-main-content">
-        <div class="search-bar">
-            <form id="search-form" name="search-form" class="grid search-form">
+        <div>
+            <form id="search-form" name="search-form" class="grid">
                 <label class="tooltip">
                     Specialty:
                     <input type="text" class="blue search-input" list="specialties" name="specialty">
@@ -66,8 +66,8 @@
                         <input type="text" class="blue search-input" list="cities" name="location">
                         <span class="tooltiptext">Double-click to see all options</span>
                     </label>
-                    <button id="current-location-btn" class="icon-btn tooltip" type="button">
-                        <i class="material-icons icon loc-icon">location_on</i>
+                    <button id="current-location-btn" class="tooltip" type="button">
+                        <i class="material-icons">location_on</i>
                         <span class="tooltiptext">Current location</span>
                     </button>
                 </div>
@@ -78,30 +78,30 @@
                     <option value="Shoham">
                     <option value="Modiin">
                 </datalist>
-                <button class="green btn" type="submit">
-                    <span class="btn-text">Search</span>
+                <button class="green" type="submit">
+                    <span>Search</span>
                 </button>
                 <div class="radius-slider">
                     <label>Radius:</label>
-                    <div class="slidecontainer">
-                        <input type="range" min="1" max="100" value="50" class="slider" id="radius-slider">
+                    <div>
+                        <input type="range" min="1" max="100" value="50" id="radius-slider">
                     </div>
-                    <label id="radius-output" class="radius-output">val</label>
+                    <label id="radius-output">val</label>
                 </div>
             </form>
         </div>
         <div class="top-border map-container">
-            <div id="map" class="map"></div>
+            <div id="map"></div>
         </div>
         <div class="top-border">
-            <div id="results-container" class="grid results-container">
-                <div class="grid blue result-container">
+            <div id="results-container" class="grid">
+                <div class="grid blue">
                     <div class="healer-icon-name">
-                        <img class="healer-icon" src="../Static/Images/business-woman.png" alt="Female Healer">
+                        <img class="healer-icon" src="Images/business-woman.png" alt="Female Healer">
                         <p>NAME_PLACEHOLDER</p>
                     </div>
                     <div class="healer-info">
-                        <div class="specialty-info">
+                        <div>
                             <label class="underline">Specialties:</label>
                             <p class="inline">SPECIALTIES_PLACEHOLDER</p>
                         </div>
@@ -112,17 +112,17 @@
                     </div>
                     <div class="healer-rating">
                         <label class="underline">Rating:</label>
-                        <i class="material-icons icon star-icon star1">star</i>
-                        <i class="material-icons icon star-icon star2">star</i>
-                        <i class="material-icons icon star-icon star3">star</i>
-                        <i class="material-icons icon star-icon star4">star</i>
-                        <i class="material-icons icon star-icon star5">star</i>
+                        <i class="material-icons star-icon star1">star</i>
+                        <i class="material-icons star-icon star2">star</i>
+                        <i class="material-icons star-icon star3">star</i>
+                        <i class="material-icons star-icon star4">star</i>
+                        <i class="material-icons star-icon star5">star</i>
                         <p class="inline">RATING_PLACEHOLDER</p>
                     </div>
                     <div class="choose-healer-btn">
-                        <a href="healer-profile-page.html?therapist=ID_PLACEHOLDER&specialty=SEARCH_SPECIALTY_PLACEHOLDER&location=SEARCH_LOCATION_PLACEHOLDER">
-                            <button class="purple btn" type="button">
-                                <span class="btn-text">Choose</span>
+                        <a href="healer?therapist=ID_PLACEHOLDER&specialty=SEARCH_SPECIALTY_PLACEHOLDER&location=SEARCH_LOCATION_PLACEHOLDER">
+                            <button class="purple" type="button">
+                                <span>Choose</span>
                             </button>
                         </a>
                     </div>

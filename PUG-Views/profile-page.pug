@@ -1,0 +1,59 @@
+extends layout
+block content
+    main
+        .grid.profile-page-content
+            div
+                h1#welcome-header.no-margin Welcome, #{`${user.firstName} ${user.lastName}`}
+            .profile-info.flex
+                h3.no-margin Your Information:
+                .profile-form-container
+                    form#update-form.grid(action='/profile' method='POST')
+                        span First Name:
+                        input.blue(disabled='' type='text' placeholder='Enter First Name' name='firstName' value=user.firstName required)
+                        span Last Name:
+                        input.blue(disabled='' type='text' placeholder='Enter Last Name' name='lastName' value=user.lastName required)
+                        span Email:
+                        input.blue(disabled='' type='email' placeholder='Enter Email' name='email' value=user.email required)
+                        if updateCompleted !== undefined
+                            .flex(
+                                class=updateCompleted ? 'form-success-msg':'form-error-msg'
+                            )
+                                span #{resMsg}
+                        button#update-btn.purple(type='button')
+                            span#update-btn-text Update
+                        button#save-btn.purple(type='cancel' disabled='')
+                            span Save
+            .grid.user-review-container
+                .review-header
+                    h3.no-margin My Reviews:
+                #user-reviews-container.grid.profile-review-container
+                    each review in reviews
+                        .grid.blue.review
+                            .review-details
+                                .mb-1
+                                    label.underline Therapist:
+                                    p.inline &nbsp;#{review.therapistFullName}
+                                div
+                                    label.underline Review:
+                                    p.inline &nbsp;#{review.reviewText}
+                            .flex.rating-container
+                                div
+                                    label.underline Rating:
+                                    i.material-icons.star-icon(
+                                        class={'checked': 1 <= Math.round(review.rating)}
+                                    ) star
+                                    i.material-icons.star-icon(
+                                        class={'checked': 2 <= Math.round(review.rating)}
+                                    ) star
+                                    i.material-icons.star-icon(
+                                        class={'checked': 3 <= Math.round(review.rating)}
+                                    ) star
+                                    i.material-icons.star-icon(
+                                        class={'checked': 4 <= Math.round(review.rating)}
+                                    ) star
+                                    i.material-icons.star-icon(
+                                        class={'checked': 5 <= Math.round(review.rating)}
+                                    ) star
+                                form(action='/deleteReview/user/'+review.userName+'/therapist/'+review.therapistId+'/review/'+review.reviewDate method='get')
+                                    button.orange(type='submit')
+                                        i.material-icons delete

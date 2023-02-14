@@ -1,0 +1,21 @@
+therapistId,userName,reviewDate,reviewText,isAnonymous,rating
+1,orbab,12/12/2022 0:00,"amazing therapist, helped me so much",FALSE,5.00
+2,orbab,03/01/2022 0:00,"this therapist helped me a lot, but there are no good transportation to his place",FALSE,3.00
+4,orbab,03/01/2022 0:00,"he is a good therapist, he really tried to help me but my pain wasn't reduced as i hoped",TRUE,2.00
+8,emunar,21/04/2022 0:00,the best therapist i could hope for! saves my life,FALSE,5.00
+10,orbab,14/07/2021 0:00,the best therapist i could hope for! saves my life,FALSE,5.00
+10,netas,14/06/2022 0:00,"amazing therapist, helped me so much",FALSE,4.00
+4,netas,14/10/2022 0:00,"amazing therapist, completely changed my life for the better",FALSE,5.00
+7,netas,02/12/2021 0:00,"good therapist, thanks to him i was able to work again",FALSE,5.00
+3,netas,09/12/2020 0:00,"im sure this therapist isn't that bad, however my Experience with him wasn't positive at all",FALSE,2.00
+5,netas,23/09/2022 0:00,"i had a very positiveExperience with this therapist, highly recommended",FALSE,5.00
+9,eladst,23/09/2022 0:00,"amazing therapist, helped me so much",FALSE,4.00
+7,eladst,28/07/2022 0:00,literally saved my life,FALSE,5.00
+8,avivr,21/05/2021 0:00,the therapist was very professional but there was no chemistry between us,FALSE,3.00
+1,eladst,16/08/2022 0:00,the therapist was very professional highly recommended,FALSE,5.00
+6,yaelb,18/03/2021 0:00,the therapist was very kind to me' help me a lot physically and emotionally,FALSE,5.00
+9,hilat,01/05/2022 0:00,"amazing therapist, helped me so much",FALSE,4.00
+3,oris,03/04/2021 0:00,"im sure this therapist isn't that bad, however my Experience with him wasn't positive at all",FALSE,3.00
+1,yaelmin,03/11/2022 0:00,"amazing therapist, helped me so much",FALSE,4.00
+8,shaharb,12/02/2023 0:00,the therapist was very professional but there was no chemistry between us,FALSE,2.00
+7,avivr,01/01/2023 0:00,"amazing therapist, helped me so much",FALSE,4.00

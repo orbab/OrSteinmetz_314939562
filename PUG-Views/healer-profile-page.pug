@@ -1,0 +1,87 @@
+extends layout
+block content
+    main
+        .grid.healer-profile-container
+            .grid.blue.healer-info-container
+                .healer-icon-name
+                    if therapist.gender !== 0
+                        img.healer-icon(src='Images/business-woman.png' alt='Female Healer')
+                    else
+                        img.healer-icon(src='Images/business-man.png' alt='Male Healer')
+                    p#healer-name #{therapist.fullName}
+                if isLoggedIn
+                    .review-healer-btn
+                        button#write-review-btn.purple(type='button')
+                            span Write A Review
+                .expanded-healer-info
+                    .mb-1
+                        label.underline Specialties:
+                        p#haeler-specialties.inline #{therapist.specialties}
+                    .mb-1
+                        label.underline Location:
+                        p#healer-location.inline #{therapist.address}
+                    div
+                        label.underline About Me:
+                        p#healer-desc.inline #{therapist.description}
+                .healer-info-rating
+                    label.underline Rating:
+                    i#star1.material-icons.star-icon(
+                        class={'checked': 1 <= therapist.averageRating}
+                    ) star
+                    i#star2.material-icons.star-icon(
+                        class={'checked': 2 <= therapist.averageRating}
+                    ) star
+                    i#star3.material-icons.star-icon(
+                        class={'checked': 3 <= therapist.averageRating}
+                    ) star
+                    i#star4.material-icons.star-icon(
+                        class={'checked': 4 <= therapist.averageRating}
+                    ) star
+                    i#star5.material-icons.star-icon(
+                        class={'checked': 5 <= therapist.averageRating}
+                    ) star
+                    p#healer-rating.inline #{therapist.averageRating}
+                unless therapist.phone === '' && therapist.website === ''
+                    #information-container.contact-info
+                        .mb-2
+                            label.underline Contact information:
+                        unless therapist.phone === ''
+                            #phone-container.mb-2
+                                i.material-icons phone
+                                p#healer-phone.inline 0#{therapist.phone}
+                        unless therapist.website === ''
+                            #website-container
+                                i.material-icons link
+                                a#healer-website(href=therapist.website)
+                                    p.inline #{therapist.website}
+            .review-header
+                h3.no-margin Reviews:
+            #reviews-container.grid
+                each review in reviews
+                    .grid.blue.review
+                        .review-details
+                            .mb-1
+                                if review.isAnonymous
+                                    label.underline Anonymous User
+                                else
+                                    label.underline #{review.userName}
+                            .mb-1
+                                label.underline Review:
+                                p.inline #{review.reviewText}
+                        .review-rating
+                            label.underline Rating:
+                            i.material-icons.star-icon(
+                                class={'checked': 1 <= Math.round(review.rating)}
+                            ) star
+                            i.material-icons.star-icon(
+                                class={'checked': 2 <= Math.round(review.rating)}
+                            ) star
+                            i.material-icons.star-icon(
+                                class={'checked': 3 <= Math.round(review.rating)}
+                            ) star
+                            i.material-icons.star-icon(
+                                class={'checked': 4 <= Math.round(review.rating)}
+                            ) star
+                            i.material-icons.star-icon(
+                                class={'checked': 5 <= Math.round(review.rating)}
+                            ) star

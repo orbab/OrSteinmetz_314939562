@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Heal Me</title>
-    <link rel="icon" type="image/x-icon" href="../Static/Images/site-icon.png">
-    <link href="../Static/global.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Images/site-icon.png">
+    <link href="global.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script defer src="../Static/healme.js"></script>
+    <script defer src="healme.js"></script>
 </head>
 <body class="background rubik">
 <main>
-    <form id="review-form" class="grid blue write-review-container">
+    <form id="review-form" class="grid blue">
         <div class="review-details">
             <div class="flex username-manage mb-2">
                 <label id="username-label" class="underline">Username</label>
                 <label>
-                    <input class="anonymous-checkbox" type="checkbox" name="anonymous-checkbox">
+                    <input type="checkbox" name="anonymous-checkbox">
                     <span>Post Anonymously</span>
                 </label>
             </div>
@@ -36,8 +36,8 @@
                     <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Really Bad!">1 star</label>
                 </div>
             </div>
-            <button class="purple btn" type="submit">
-                <span class="btn-text">Submit</span>
+            <button class="purple" type="submit">
+                <span>Submit</span>
             </button>
         </div>
     </form>

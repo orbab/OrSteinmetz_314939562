@@ -1,0 +1,73 @@
+extends layout
+block content
+    main
+        .grid.search-page-main-content
+            div
+                form#search-form.grid(name='search-form' action='/search' method='GET')
+                    label.tooltip
+                        | Specialty:
+                        input.blue.search-input(type='text' list='specialties' name='specialty')
+                        span.tooltiptext Double-click to see all options
+                    datalist#specialties
+                    .location-search
+                        label.tooltip
+                            | Location:
+                            input.blue.search-input(type='text' list='cities' name='location')
+                            span.tooltiptext Double-click to see all options
+                        button#current-location-btn.tooltip(type='button')
+                            i.material-icons location_on
+                            span.tooltiptext Current location
+                    datalist#cities
+                        option(value='Beer Sheva')
+                        option(value='Tel Aviv')
+                        option(value='Jerusalem')
+                        option(value='Shoham')
+                        option(value='Modiin')
+                    button.green(type='submit')
+                        span Search
+                    .radius-slider
+                        label Radius:
+                        div
+                            input#radius-slider(type='range' min='1' max='100' value='50' name="radius")
+                        label#radius-output val
+            .top-border.map-container
+                #map
+            .top-border
+                #results-container.grid
+                    each therapist in therapists
+                        .grid.blue
+                            .healer-icon-name
+                                if therapist.gender !== 0
+                                    img.healer-icon(src='Images/business-woman.png' alt='Female Healer')
+                                else
+                                    img.healer-icon(src='Images/business-man.png' alt='Male Healer')
+                                p #{therapist.fullName}
+                            .healer-info
+                                div
+                                    label.underline Specialties:
+                                    p.inline #{therapist.specialties}
+                                div
+                                    label.underline Location:
+                                    p.inline #{therapist.address}
+                            .healer-rating
+                                label.underline Rating:
+                                i.material-icons.star-icon(
+                                    class={'checked': 1 <= therapist.averageRating}
+                                ) star
+                                i.material-icons.star-icon(
+                                    class={'checked': 2 <= therapist.averageRating}
+                                ) star
+                                i.material-icons.star-icon(
+                                    class={'checked': 3 <= therapist.averageRating}
+                                ) star
+                                i.material-icons.star-icon(
+                                    class={'checked': 4 <= therapist.averageRating}
+                                ) star
+                                i.material-icons.star-icon(
+                                    class={'checked': 5 <= therapist.averageRating}
+                                ) star
+                                p.inline #{therapist.averageRating}
+                            .choose-healer-btn
+                                a(href='healer?therapist=' + therapist.therapistId)
+                                    button.purple(type='button')
+                                        span Choose

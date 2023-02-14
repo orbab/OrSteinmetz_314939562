@@ -1,0 +1,23 @@
+extends layout
+block content
+    main
+        .grid.home-page-main-content
+            div
+                h1 Welcome To Heal Me!
+                h3.italic Where there is healing, there is Hope
+                p
+                    | In our website you will be able to find the best alternative therapists in a fast and easy way.
+                p
+                    | Search Therapists by profession and location, and find the best Therapists according to our users.
+                p
+                    | Register to leave reviews and rate therapists.
+                .flex.home-buttons
+                    a(href='search')
+                        button.green(type='button')
+                            span Start searching!
+                    unless isLoggedIn
+                        a(href='register')
+                            button.green(type='button')
+                                span Register
+            .flex
+                img.home-page-icon(src='Images/site-icon.png' alt='logo')

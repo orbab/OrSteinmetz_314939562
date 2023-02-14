@@ -1,0 +1,8 @@
+extends layout
+block content
+    main
+        .log-page.flex
+                h3.login-instructions Are you sure you would like to log out?
+                form(action='/logout' method='POST')
+                    button#logout-btn.purple(type='submit')
+                        span Yes, I am sure

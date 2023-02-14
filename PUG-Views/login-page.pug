@@ -1,0 +1,26 @@
+extends layout
+block content
+    if loginCompleted
+        script.
+            new Promise(res => setTimeout(res, 3000)).then(() => {
+                redirectToPage('/profile');
+            })
+    main
+        .log-page.flex
+            h1 Let&apos;s Get Started
+            h3.login-instructions Enter your username and password
+            form.login-form.grid(action='/login' method='POST')
+                span Username:
+                input.blue(type='text' placeholder='Enter Username' name='username' required)
+                span Password:
+                input.blue(type='password' placeholder='Enter Password' name='password' required)
+                if loginCompleted !== undefined
+                    .flex(
+                        class=loginCompleted ? 'form-success-msg':'form-error-msg'
+                    )
+                        if loginCompleted
+                            #loading-spinner
+                        span #{resMsg}
+                button.login-btn.purple(type='submit') Log In
+            a(href='register')
+                h5 Don&apos;t have a user yet? Sign up!

@@ -3,45 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Heal Me</title>
-    <link rel="icon" type="image/x-icon" href="../Static/Images/site-icon.png">
-    <link href="../Static/global.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Images/site-icon.png">
+    <link href="global.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script defer src="../Static/healme.js"></script>
+    <script defer src="healme.js"></script>
 </head>
 <body class="background rubik">
 <nav>
-    <div class="navbar flex">
+    <div class="flex">
         <div class="flex main-nav">
             <div class="site-logo flex">
-                <img src="../Static/Images/site-icon.png" class="logo" alt="Logo">
+                <img src="Images/site-icon.png" alt="Logo">
                 <h1>HealMe</h1>
             </div>
-            <ul class="nav-list">
-                <li id="nav-home-btn" class="inline nav-item nav-item-animation">
-                    <a class="link" href="home-page.html">
-                        <i class="material-icons icon">home</i>
+            <ul>
+                <li id="nav-home-btn" class="inline nav-item-animation">
+                    <a class="link" href="home">
+                        <i class="material-icons">home</i>
                         <span>Home</span>
                     </a>
                 </li>
-                <li id="nav-search-btn" class="inline nav-item nav-item-animation">
-                    <a class="link" href="search-page.html">
-                        <i class="material-icons icon">search</i>
+                <li id="nav-search-btn" class="inline nav-item-animation">
+                    <a class="link" href="search">
+                        <i class="material-icons">search</i>
                         <span>Search</span>
                     </a>
                 </li>
-                <li id="nav-profile-btn" class="inline nav-item nav-item-animation">
-                    <a class="link" href="profile-page.html">
-                        <i class="material-icons icon">person</i>
+                <li id="nav-profile-btn" class="inline nav-item-animation">
+                    <a class="link" href="profile">
+                        <i class="material-icons">person</i>
                         <span>My Profile</span>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="login-nav-button">
-            <a id="log-link" href="login-page.html">
-                <button type="button" class="purple btn">
-                    <span class="btn-text">
-                        <i id="log-reg-icon" class="material-icons icon">login</i>
+            <a id="log-link" href="login">
+                <button type="button" class="purple">
+                    <span>
+                        <i id="log-reg-icon" class="material-icons">login</i>
                         <span id="log-reg-text">Log In</span>
                     </span>
                 </button>
@@ -50,10 +50,10 @@
     </div>
 </nav>
 <main>
-    <div class="login-page flex">
+    <div class="log-page flex">
         <h3 class="login-instructions">Are you sure you would like to log out?</h3>
-        <button id="logout-btn" class="purple btn" type="button">
-            <span class="btn-text">Yes, I am sure</span>
+        <button id="logout-btn" class="purple" type="button">
+            <span>Yes, I am sure</span>
         </button>
     </div>
 </main>

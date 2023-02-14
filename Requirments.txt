@@ -1,0 +1,29 @@
+modules:
+
+body-parser
+cookie-parser
+csvtojson
+express
+google-geocoder
+mysql2
+pug
+
+routes:
+
+localhost3000/createDB/Users/create -- יצירת טבלת משתמשים
+localhost3000/createDB/Users/read -- צפייה בטבלת משתמשים
+localhost3000/createDB/Users/update -- החנסת נתונים לטבלת משתמשים
+localhost3000/createDB/Users/delete -- מחיקה טבלת משתמשים
+localhost3000/createDB/Specialties/create -- יצירת טבלת תחומי התמחויות
+localhost3000/createDB/Specialties/read -- צפייה בטבלת תחומי התמחויות
+localhost3000/createDB/Specialties/update -- החנסת נתונים לטבלת תחומי התמחויות
+localhost3000/createDB/Specialties/delete -- מחיקה טבלת תחומי התמחויות
+localhost3000/createDB/Therapists/create -- יצירת בטבלת מטפלים
+localhost3000/createDB/Therapists/read -- צפייה בטבלת מטפלים
+localhost3000/createDB/Therapists/update -- החנסת נתונים לטבלת מטפלים
+localhost3000/createDB/Therapists/delete -- מחיקה טבלת מטפלים
+localhost3000/createDB/Reviews/create -- יצירת טבלת ביקורות
+localhost3000/createDB/Reviews/read -- צפייה בטבלת ביקורות
+localhost3000/createDB/Reviews/update -- החנסת נתונים לטבלת ביקורות
+localhost3000/createDB/Reviews/delete -- מחיקת טבלת ביקורות
+localhost3000/createDB/DropAll -- מחיקת כל הטבלאות

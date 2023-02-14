@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Heal Me</title>
-    <link rel="icon" type="image/x-icon" href="../Static/Images/site-icon.png">
-    <link href="../Static/global.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Images/site-icon.png">
+    <link href="global.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script defer src="../Static/healme.js"></script>
+    <script defer src="healme.js"></script>
 </head>
-<body class="background rubik">
+<body>
 <nav>
-    <div class="navbar home-page-nav flex">
+    <div class="flex">
         <div class="flex main-nav">
-            <ul class="nav-list">
-                <li id="nav-home-btn" class="inline nav-item nav-item-animation">
-                    <a class="link" href="home-page.html">
-                        <i class="material-icons icon">home</i>
+            <ul>
+                <li id="nav-home-btn" class="inline nav-item-animation">
+                    <a class="link" href="home">
+                        <i class="material-icons">home</i>
                         <span>Home</span>
                     </a>
                 </li>
-                <li id="nav-search-btn" class="inline nav-item nav-item-animation">
-                    <a class="link" href="search-page.html">
-                        <i class="material-icons icon">search</i>
+                <li id="nav-search-btn" class="inline nav-item-animation">
+                    <a class="link" href="search">
+                        <i class="material-icons">search</i>
                         <span>Search</span>
                     </a>
                 </li>
-                <li id="nav-profile-btn" class="inline nav-item nav-item-animation">
-                    <a class="link" href="profile-page.html">
-                        <i class="material-icons icon">person</i>
+                <li id="nav-profile-btn" class="inline nav-item-animation">
+                    <a class="link" href="profile">
+                        <i class="material-icons">person</i>
                         <span>My Profile</span>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="login-nav-button">
-            <a id="log-link" href="login-page.html">
-                <button id="log-btn" type="button" class="purple btn">
-                    <span class="btn-text">
-                        <i id="log-reg-icon" class="material-icons icon">login</i>
+            <a id="log-link" href="login">
+                <button id="log-btn" type="button" class="purple">
+                    <span>
+                        <i id="log-reg-icon" class="material-icons">login</i>
                         <span id="log-reg-text">Log In</span>
                     </span>
                 </button>
@@ -47,8 +47,8 @@
 </nav>
 <main>
     <div class="grid home-page-main-content">
-        <div class="home-page-left home-page-desc">
-            <h1 class="site-name">Welcome To Heal Me!</h1>
+        <div>
+            <h1>Welcome To Heal Me!</h1>
             <h3 class="italic">Where there is healing, there is Hope</h3>
             <p>
                 In our website you will be able to find the best alternative therapists in a fast and easy way.
@@ -61,20 +61,20 @@
                 Register to leave reviews and rate therapists.
             </p>
             <div class="flex home-buttons">
-                <a href="search-page.html">
-                    <button type="button" class="green btn">
-                        <span class="btn-text">Start searching!</span>
+                <a href="search">
+                    <button type="button" class="green">
+                        <span>Start searching!</span>
                     </button>
                 </a>
-                <a id="register-btn" href="register-page.html">
-                    <button type="button" class="green btn">
-                        <span class="btn-text">Register</span>
+                <a id="register-btn" href="register">
+                    <button type="button" class="green">
+                        <span>Register</span>
                     </button>
                 </a>
             </div>
         </div>
-        <div class="home-page-right home-page-icon-container flex">
-            <img class="home-page-icon" src="../Static/Images/site-icon.png" alt="logo">
+        <div class="flex">
+            <img class="home-page-icon" src="Images/site-icon.png" alt="logo">
         </div>
     </div>
 </main>

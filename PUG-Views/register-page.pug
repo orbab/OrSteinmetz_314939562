@@ -1,0 +1,32 @@
+extends layout
+block content
+    if registerCompleted
+        script.
+            new Promise(res => setTimeout(res, 3000)).then(() => {
+                redirectToPage('/login');
+            })
+    main
+        .log-page.flex
+            h1 Let&apos;s Get You In
+            h3.register-instruction Enter the following information:
+            form.login-form.grid(action='/register' method='POST')
+                span First Name:
+                input.blue(type='text' placeholder='Enter First Name' name='firstName' required='')
+                span Last Name:
+                input.blue(type='text' placeholder='Enter Last Name' name='lastName' required='')
+                span Email:
+                input.blue(type='email' placeholder='Enter Email' name='email' required='')
+                span Username:
+                input.blue(type='text' placeholder='Enter Username' name='username' required='')
+                span Password:
+                input.blue(type='password' placeholder='Enter Password' name='password' required='')
+                if registerCompleted !== undefined
+                    .flex(
+                        class=registerCompleted ? 'form-success-msg':'form-error-msg'
+                    )
+                        if registerCompleted
+                            #loading-spinner
+                        span #{resMsg}
+                button.login-btn.purple(type='submit') Register
+            a(href='login')
+                h5 Already have a user? Log in!
